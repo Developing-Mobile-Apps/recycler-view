@@ -65,14 +65,16 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (item.getItemId() == R.id.action_reset) {
+            // reset the wordList to its original state
+            mWordList.clear();
+            for (int i = 0; i < 20; i++) {
+                mWordList.addLast("Word " + i);
+            }
+            // notify the adapter, that the data has changed
+            mRecyclerView.getAdapter().notifyDataSetChanged();
+            // scroll to the top
+            mRecyclerView.smoothScrollToPosition(0);
         }
 
         return super.onOptionsItemSelected(item);
