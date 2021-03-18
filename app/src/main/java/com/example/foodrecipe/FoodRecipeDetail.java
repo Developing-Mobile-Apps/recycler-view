@@ -29,10 +29,11 @@ public class FoodRecipeDetail extends AppCompatActivity {
         // get the data from the intent
         String ingredients = intent.getStringExtra("ingredients");
         String procedure = intent.getStringExtra("procedure");
+        int imageId = intent.getIntExtra("image", 0);
 
         // set data to the view
         foodRecipeIngredients.setText(ingredients);
         foodRecipeProcedure.setText(procedure);
-
+        finishedDish.setImageResource(imageId);
     }
 }

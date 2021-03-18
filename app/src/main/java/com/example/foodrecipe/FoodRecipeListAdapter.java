@@ -73,6 +73,7 @@ public class FoodRecipeListAdapter extends RecyclerView.Adapter<FoodRecipeListAd
             // send the data with the intent
             intent.putExtra("ingredients", foodRecipe.getIngredients());
             intent.putExtra("procedure", foodRecipe.getProcedure());
+            intent.putExtra("image", foodRecipe.getImage());
 
             // navigate to another activity
             context.startActivity(intent);
