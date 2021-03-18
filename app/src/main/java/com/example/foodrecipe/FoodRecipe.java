@@ -7,12 +7,14 @@ public class FoodRecipe {
     private String briefDescription;
     private ArrayList<String> ingredients;
     private String procedure;
+    private String image;
 
-    public FoodRecipe(String title, String briefDescription, ArrayList<String> ingredients, String procedure) {
+    public FoodRecipe(String title, String briefDescription, ArrayList<String> ingredients, String procedure, String image) {
         this.title = title;
         this.briefDescription = briefDescription;
         this.ingredients = ingredients;
         this.procedure = procedure;
+        this.image = image;
     }
 
     public String getIngredients() {
@@ -29,6 +31,14 @@ public class FoodRecipe {
 
     public void setIngredients(ArrayList<String> ingredients) {
         this.ingredients = ingredients;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getTitle() {
