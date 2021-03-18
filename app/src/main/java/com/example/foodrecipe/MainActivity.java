@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         // add data
         for (int i = 0; i < 20; i++) {
-            FoodRecipe foodRecipe = new FoodRecipe(title, briefDescription, ingredients, procedure);
+            FoodRecipe foodRecipe = new FoodRecipe(title, briefDescription, ingredients, procedure, R.drawable.lorem_picsum);
             foodRecipeList.add(foodRecipe);
         }
 

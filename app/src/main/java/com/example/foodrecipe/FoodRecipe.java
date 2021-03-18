@@ -7,9 +7,9 @@ public class FoodRecipe {
     private String briefDescription;
     private ArrayList<String> ingredients;
     private String procedure;
-    private String image;
+    private int image;
 
-    public FoodRecipe(String title, String briefDescription, ArrayList<String> ingredients, String procedure, String image) {
+    public FoodRecipe(String title, String briefDescription, ArrayList<String> ingredients, String procedure, int image) {
         this.title = title;
         this.briefDescription = briefDescription;
         this.ingredients = ingredients;
@@ -33,11 +33,11 @@ public class FoodRecipe {
         this.ingredients = ingredients;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 
